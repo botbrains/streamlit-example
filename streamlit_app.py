@@ -8,7 +8,7 @@ st.title('🤖🧠')
 
 def generate_response(input_text):
     try:
-        llm = OpenAI(temperature=0.7, OPENAI_API_KEY)
+        llm = OpenAI(temperature=0.7, OPENAI_API_KEY="$OPENAI_API_KEY")
         response = llm(input_text)
         st.info(response)
     except Exception as e:
