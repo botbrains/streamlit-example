@@ -2,6 +2,8 @@ import streamlit as st
 import os
 from langchain.llms import OpenAI
 
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+
 st.title('🤖🧠')
 
 def generate_response(input_text):
