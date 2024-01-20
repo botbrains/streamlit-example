@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 from langchain.llms import OpenAI
 
 st.title('🤖🧠')
