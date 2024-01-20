@@ -2,13 +2,13 @@ import streamlit as st
 import os
 from langchain.llms import OpenAI
 
-os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 st.title('🤖🧠')
 
 def generate_response(input_text):
     try:
-        llm = OpenAI(temperature=0.7, openai_api_key='OPENAI_API_KEY')
+        llm = OpenAI(temperature=0.7, openai_api_key="OPENAI_API_KEY")
         response = llm(input_text)
         st.info(response)
     except Exception as e:
