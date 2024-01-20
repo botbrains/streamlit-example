@@ -10,5 +10,5 @@ def generate_response(input_text):
 with st.form('my_form'):
   text = st.text_area('Enter text:', 'Ask ChatGPT anything...')
   submitted = st.form_submit_button('Submit')
-  if submitted and openai_api_key.startswith('sk-'):
+  if submitted :
     generate_response(text)
